@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27A386091D57B8DF006C8DE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A386081D57B8DF006C8DE4 /* AppDelegate.swift */; };
+		27A3860B1D57B8DF006C8DE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A3860A1D57B8DF006C8DE4 /* ViewController.swift */; };
+		27A3860E1D57B8DF006C8DE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A3860C1D57B8DF006C8DE4 /* Main.storyboard */; };
+		27A386101D57B8DF006C8DE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27A3860F1D57B8DF006C8DE4 /* Assets.xcassets */; };
+		27A386131D57B8DF006C8DE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A386111D57B8DF006C8DE4 /* LaunchScreen.storyboard */; };
+		27A3861E1D57B8DF006C8DE4 /* ScotchGuardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A3861D1D57B8DF006C8DE4 /* ScotchGuardTests.swift */; };
+		27A386291D57B8DF006C8DE4 /* ScotchGuardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A386281D57B8DF006C8DE4 /* ScotchGuardUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27A3861A1D57B8DF006C8DE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27A385FD1D57B8DF006C8DE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27A386041D57B8DF006C8DE4;
+			remoteInfo = ScotchGuard;
+		};
+		27A386251D57B8DF006C8DE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27A385FD1D57B8DF006C8DE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27A386041D57B8DF006C8DE4;
+			remoteInfo = ScotchGuard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		27A386051D57B8DF006C8DE4 /* ScotchGuard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScotchGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27A386081D57B8DF006C8DE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		27A3860A1D57B8DF006C8DE4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		27A3860D1D57B8DF006C8DE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		27A3860F1D57B8DF006C8DE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27A386121D57B8DF006C8DE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		27A386141D57B8DF006C8DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27A386191D57B8DF006C8DE4 /* ScotchGuardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScotchGuardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27A3861D1D57B8DF006C8DE4 /* ScotchGuardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScotchGuardTests.swift; sourceTree = "<group>"; };
+		27A3861F1D57B8DF006C8DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27A386241D57B8DF006C8DE4 /* ScotchGuardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScotchGuardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27A386281D57B8DF006C8DE4 /* ScotchGuardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScotchGuardUITests.swift; sourceTree = "<group>"; };
+		27A3862A1D57B8DF006C8DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27A386021D57B8DF006C8DE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27A386161D57B8DF006C8DE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27A386211D57B8DF006C8DE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27A385FC1D57B8DF006C8DE4 = {
+			isa = PBXGroup;
+			children = (
+				27A386071D57B8DF006C8DE4 /* ScotchGuard */,
+				27A3861C1D57B8DF006C8DE4 /* ScotchGuardTests */,
+				27A386271D57B8DF006C8DE4 /* ScotchGuardUITests */,
+				27A386061D57B8DF006C8DE4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		27A386061D57B8DF006C8DE4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27A386051D57B8DF006C8DE4 /* ScotchGuard.app */,
+				27A386191D57B8DF006C8DE4 /* ScotchGuardTests.xctest */,
+				27A386241D57B8DF006C8DE4 /* ScotchGuardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27A386071D57B8DF006C8DE4 /* ScotchGuard */ = {
+			isa = PBXGroup;
+			children = (
+				27A386081D57B8DF006C8DE4 /* AppDelegate.swift */,
+				27A3860A1D57B8DF006C8DE4 /* ViewController.swift */,
+				27A3860C1D57B8DF006C8DE4 /* Main.storyboard */,
+				27A3860F1D57B8DF006C8DE4 /* Assets.xcassets */,
+				27A386111D57B8DF006C8DE4 /* LaunchScreen.storyboard */,
+				27A386141D57B8DF006C8DE4 /* Info.plist */,
+			);
+			path = ScotchGuard;
+			sourceTree = "<group>";
+		};
+		27A3861C1D57B8DF006C8DE4 /* ScotchGuardTests */ = {
+			isa = PBXGroup;
+			children = (
+				27A3861D1D57B8DF006C8DE4 /* ScotchGuardTests.swift */,
+				27A3861F1D57B8DF006C8DE4 /* Info.plist */,
+			);
+			path = ScotchGuardTests;
+			sourceTree = "<group>";
+		};
+		27A386271D57B8DF006C8DE4 /* ScotchGuardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				27A386281D57B8DF006C8DE4 /* ScotchGuardUITests.swift */,
+				27A3862A1D57B8DF006C8DE4 /* Info.plist */,
+			);
+			path = ScotchGuardUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27A386041D57B8DF006C8DE4 /* ScotchGuard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27A3862D1D57B8DF006C8DE4 /* Build configuration list for PBXNativeTarget "ScotchGuard" */;
+			buildPhases = (
+				27A386011D57B8DF006C8DE4 /* Sources */,
+				27A386021D57B8DF006C8DE4 /* Frameworks */,
+				27A386031D57B8DF006C8DE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScotchGuard;
+			productName = ScotchGuard;
+			productReference = 27A386051D57B8DF006C8DE4 /* ScotchGuard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		27A386181D57B8DF006C8DE4 /* ScotchGuardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27A386301D57B8DF006C8DE4 /* Build configuration list for PBXNativeTarget "ScotchGuardTests" */;
+			buildPhases = (
+				27A386151D57B8DF006C8DE4 /* Sources */,
+				27A386161D57B8DF006C8DE4 /* Frameworks */,
+				27A386171D57B8DF006C8DE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27A3861B1D57B8DF006C8DE4 /* PBXTargetDependency */,
+			);
+			name = ScotchGuardTests;
+			productName = ScotchGuardTests;
+			productReference = 27A386191D57B8DF006C8DE4 /* ScotchGuardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		27A386231D57B8DF006C8DE4 /* ScotchGuardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27A386331D57B8DF006C8DE4 /* Build configuration list for PBXNativeTarget "ScotchGuardUITests" */;
+			buildPhases = (
+				27A386201D57B8DF006C8DE4 /* Sources */,
+				27A386211D57B8DF006C8DE4 /* Frameworks */,
+				27A386221D57B8DF006C8DE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27A386261D57B8DF006C8DE4 /* PBXTargetDependency */,
+			);
+			name = ScotchGuardUITests;
+			productName = ScotchGuardUITests;
+			productReference = 27A386241D57B8DF006C8DE4 /* ScotchGuardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27A385FD1D57B8DF006C8DE4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Broham Inc.";
+				TargetAttributes = {
+					27A386041D57B8DF006C8DE4 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					27A386181D57B8DF006C8DE4 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 27A386041D57B8DF006C8DE4;
+					};
+					27A386231D57B8DF006C8DE4 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 27A386041D57B8DF006C8DE4;
+					};
+				};
+			};
+			buildConfigurationList = 27A386001D57B8DF006C8DE4 /* Build configuration list for PBXProject "ScotchGuard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 27A385FC1D57B8DF006C8DE4;
+			productRefGroup = 27A386061D57B8DF006C8DE4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27A386041D57B8DF006C8DE4 /* ScotchGuard */,
+				27A386181D57B8DF006C8DE4 /* ScotchGuardTests */,
+				27A386231D57B8DF006C8DE4 /* ScotchGuardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27A386031D57B8DF006C8DE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27A386131D57B8DF006C8DE4 /* LaunchScreen.storyboard in Resources */,
+				27A386101D57B8DF006C8DE4 /* Assets.xcassets in Resources */,
+				27A3860E1D57B8DF006C8DE4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27A386171D57B8DF006C8DE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27A386221D57B8DF006C8DE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27A386011D57B8DF006C8DE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27A3860B1D57B8DF006C8DE4 /* ViewController.swift in Sources */,
+				27A386091D57B8DF006C8DE4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27A386151D57B8DF006C8DE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27A3861E1D57B8DF006C8DE4 /* ScotchGuardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27A386201D57B8DF006C8DE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27A386291D57B8DF006C8DE4 /* ScotchGuardUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27A3861B1D57B8DF006C8DE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27A386041D57B8DF006C8DE4 /* ScotchGuard */;
+			targetProxy = 27A3861A1D57B8DF006C8DE4 /* PBXContainerItemProxy */;
+		};
+		27A386261D57B8DF006C8DE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27A386041D57B8DF006C8DE4 /* ScotchGuard */;
+			targetProxy = 27A386251D57B8DF006C8DE4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		27A3860C1D57B8DF006C8DE4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27A3860D1D57B8DF006C8DE4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		27A386111D57B8DF006C8DE4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27A386121D57B8DF006C8DE4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		27A3862B1D57B8DF006C8DE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		27A3862C1D57B8DF006C8DE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		27A3862E1D57B8DF006C8DE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ScotchGuard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.broham.ScotchGuard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		27A3862F1D57B8DF006C8DE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ScotchGuard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.broham.ScotchGuard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		27A386311D57B8DF006C8DE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ScotchGuardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.broham.ScotchGuardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScotchGuard.app/ScotchGuard";
+			};
+			name = Debug;
+		};
+		27A386321D57B8DF006C8DE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ScotchGuardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.broham.ScotchGuardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScotchGuard.app/ScotchGuard";
+			};
+			name = Release;
+		};
+		27A386341D57B8DF006C8DE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ScotchGuardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.broham.ScotchGuardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ScotchGuard;
+			};
+			name = Debug;
+		};
+		27A386351D57B8DF006C8DE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ScotchGuardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.broham.ScotchGuardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ScotchGuard;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27A386001D57B8DF006C8DE4 /* Build configuration list for PBXProject "ScotchGuard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27A3862B1D57B8DF006C8DE4 /* Debug */,
+				27A3862C1D57B8DF006C8DE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27A3862D1D57B8DF006C8DE4 /* Build configuration list for PBXNativeTarget "ScotchGuard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27A3862E1D57B8DF006C8DE4 /* Debug */,
+				27A3862F1D57B8DF006C8DE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		27A386301D57B8DF006C8DE4 /* Build configuration list for PBXNativeTarget "ScotchGuardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27A386311D57B8DF006C8DE4 /* Debug */,
+				27A386321D57B8DF006C8DE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		27A386331D57B8DF006C8DE4 /* Build configuration list for PBXNativeTarget "ScotchGuardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27A386341D57B8DF006C8DE4 /* Debug */,
+				27A386351D57B8DF006C8DE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27A385FD1D57B8DF006C8DE4 /* Project object */;
+}
