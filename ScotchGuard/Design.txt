@@ -1,0 +1,117 @@
+Design Notes
+
+Please make your window WIDE
+
+• About the project
+
+    I used the project to test out some hypothesis on how this interface could be put together. It demonstrates 3 things:
+
+    (1) Loading data from the config.plist, and the network
+    (2) The radial interface implemented with UIKit dynamics.
+    (3) How a newly loaded item can be animated into place. In the demo, a new item is represented by the green square. You can see it starts out in the center (it would be behind Scotch). After spinning the interface once or twice, it will move into place after about 5 seconds to simulate the transition.
+|
+
+• Take some time to figure out all of the different tasks that need to be done to complete this app. Write them down as if you were planning this project yourself. These may take the form of user stories, checklists, an outline of features, whatever makes the most sense to you. This step doesn't need to be very technical, it just needs to identify all the unique chunks of work that you think would be required to complete this app. However you decide to tackle it, document your work in your github repo.
+
+
+(1) Splash screen that transitions to the first screen in the NUX (New user experience)
+(2) Top & bottom panels that transition on, and can have contents change for each screen in the NUX
+(3) Transition to outfit selection screen with two default outfits, and several loaded outfits, presented in a radial interface that spins and respects release velocity.
+    • The outfits load into positions defined by 5 spokes on the wheel.
+    • Even when there are less than five items, existing items always appear on the spokes and do not balance their positions across the wheel. Either the wheel is always rotated so that the items are placed symmetrically, or the initial state is always such that the "point" of the pentagram is oriented down. It's unclear which is the proper behavior (question for the designer).
+    • Upon rotation, the wheel does not snap into a preconfigured orientation but instead stops when its kinetic energy naturally runs out
+(4) Outfit selection animation: outfit bounding circle expands, and outfit iconography grows to an actual outfit on Scotch. Unselected items fall to the floor with inter-object collision detection to prevent items from overlapping.
+(5) Clicking on the outfit transitions to state described in (3)
+
+(*) Most animations have a spring to them.
+
+
+
+• Next, take some time to get more technical. Plan out what the major technical components are, and define how they work together. This is your chance to be an architect and make high-level decisions about what technology you want to use, and how you want to implement it. Write this technical strategy down in a way that you feel would be useful if you were to actually code this project.
+
+
+
+        GENERAL NUX FLOW
+
+        NUXSequenceViewController: UINavigationController (manages the sequence of screens in the NUX)
+                        |
+                        |
+                        |   pushes these in sequence, with appopriate initial configurations to each NUXViewController
+                        |
+                        v
+        [LaunchScreenToNUXViewController, NUXViewController 1, …, NUXViewController n, DressScotchViewController]
+
+
+
+
+(A) TRANSITION FROM LAUNCH SCREEN TO FIRST NUX SCREEN: The splash screen (1) is specified in LaunchScreen.storyboard. Upon launch of the app (in application:diDFinishLaunchingWithOptions:), the app detects if this is a first time launch. If it is, it instantiates a NUXController and sets it as the root view controller, which is actually a UINavigationController (NUXSequenceViewController) discussed in (B). The NUXController loads the LaunchScreen.storyboard and presents the contained initial view controller as the first screen of the NUX (LaunchScreenToNUXViewController). This ensures that the transition from the launch screen to the first screen of the NUX is seamless, and now allows us to subsequently animate the elements of the launch screen in a proper view controller. UIView animations can then be used to animate the titles off of the screen, and scale the "O" off of the screen as well, as well as placing Scotch in his initial NUX position.
+
+    I used this technique in Banquet's NUX to animate elements from the launch screen to the first screen in the NUX in a similar way.
+
+(B) TRANSITION FROM FIRST NUX SCREEN TO FIRST NUX WITH PANELS: In the NUX (2) a series of screens is transitioned in a UINavigationController. A subclass of UINavigationController (NUXSequenceViewController) is used to specify the order of screens and is the one source of truth for the screen ordering. This allows the NUX to be easily modified with new screens, or for existing screens to be reordered. It allows for dynamic ordering of the screens (for example, if we want to run NUX tests where different users receive a different NUX according to server-side logic to test the effectiveness of NUX permutations). Further, if the design in the future specifies that users can go back to a previous step, the functionality is already built in.
+
+    Subsequent NUX screens are pushed onto the screen, but the navigation bar and thus the back buttons are hidden. The swipe-to-back gesture is disabled (interactivePopGestureRecognizer = false). Each NUX screen (except the first which is a LaunchScreenToNUXViewController) is a NUXViewController that contains an image of Scotch, a top panel and a bottom panel. The panels can be defaulted to "off" on initialization by specifying arePanelsShown = false in an initializer. The panels can be transitioned to either state using UIView animations to slide them on and off.
+
+    After (A), Scotch is already present on the screen in a LaunchScreenToNUXViewController with the titles already animated off. This is the current topViewController. After the LaunchScreenToNUXViewController finished animating its titles off, it signaled the NUXSequenceViewController to push the next screen using the responder chain. NUXSequenceViewController creates a NUXViewController and instantiates it with the first message and first button title. The top and bottom panels are defaulted to off. This new controller is then pushed onto the navigation stack with NO animation, seamlessly replacing the LaunchScreenToNUXViewController with (as far as the user knows) no visual change. In viewDidAppear of NUXViewController, if the the panels are "off", the property is changed to "on", triggering a UIView animation to slide the panels on, displaying the first message and button.
+
+
+(C) SUBSEQUENT NUX SCREENS: Subsequent NUX screens are pushed when the previous NUX screen's button is pressed. Pressing this button sends a signal using the responder chain signaling the NUXSequenceViewController to configure the next NUXViewController. This time (and subsequent times) the NUXSequenceViewController instantiates a NUXViewController with panels initialized "on", and configures the next message and button title. Further, when it pushes this new controller, it does it by using a custom push transition by assigning itself as a UINavigationControllerDelegate and implementing:
+
+    - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+        animationControllerForOperation:(UINavigationControllerOperation)operation
+        fromViewController:(UIViewController*)fromVC
+        toViewController:(UIViewController*)toVC
+
+Its implementation of this method is smart enough to know when to use a custom transition (subsequent NUX screens) and when to not use one (LaunchScreenToNUXViewController -> NUXViewController; NUXViewController -> DressScotchViewController).
+
+    As an example of a custom transition, see this example project of mine: https://github.com/leftspin/SnapTwitBook.git
+
+    SnapTwitBook demonstrates how an element of the presenting view controller can transition onto and become an element of the presented view controller. The animations depends on the two view controllers adopting a protocol (ImageTransitionable) that is able to reference the element that is common to both view controllers. Adapted to this app, the protocol would allow access to the message label and button (and the image of Scotch, which is used later) in the current view controller and the controller to be pushed. The custom transition can snapshot these views and use the snapshots as animation props to (1) scroll the old message off (2) scroll the new message on, and (3) fade the new button in.
+
+(D) TRANSITION FROM NUX TO DressScotchViewController: The last screen in the NUX is DressScotchViewController which presents a radial interface for dressing Scotch. After the last NUXViewController's button is pressed (which signals NUXSequenceViewController via the responder chain), the NUXSequenceViewController calls a method on the current NUXViewController that hides the panels and performs a scaling animation on Scotch that leaves the screen in a state matching the initial state of a DressScotchViewController. This method would accept a finished block that it calls when animation completes. The NUXSequenceViewController configures this block to create a new DressScotchViewController and push it onto the navigation stack without animation, replacing the NUXViewController with a DressScotchViewController seamlessly.
+
+(E) DressScotchViewController: This view controller allows the user to select an outfit to dress Scotch. This controller contains an array of attachment points that can be precalculated and stored in an array using (x0 + r cos theta, y0 + r sin theta) where thetas are 2PI divided by the number of desired attachment points (in this case 5). The attachment points specify offsets from the center of a rotation armature (see the blue square when you run this project) and are equally spaced around its perimeter. The green square is an example of an attachment at an attachment point.
+
+    This screen contains a model (an array) that specifies items to be "attached". Each attachment is a struct that matches the provided config/json.
+
+    This screen displays Scotch in the center with an invisible armature behind him similar to the blue-square armature in this project. It uses UIKit Dynamics to attach attachmentPoints to the precalculated positions, and attachments to those attachmentPoints. UIGestureRecognizers are used to track touches and to assign forces that allow the armature to continue to spin freely when "flicked". See the code for exactly how this is done. In the actual app, there are three model dictionaries that are used to construct the armature: (i) attachmentPoints that specify where items can be attached, (ii) circles that contain the circles for the icons, and (iii) attachments that are the actual costume image views. They should all be keyed by the costume IDs specified in the model. Each costume is attached in this armature:
+
+
+
+    ATTACHMENT ARMATURE
+
+                                                                    | "attachment" Icon Circle (green square)
+    Radial Root (blue square) -> Attachment Point (red square) ->   |
+                                                                    | "attachment" Costume (the costume image itself, not pictured)
+
+
+
+
+    Although the costume is not pictured, it has behaviors consistent with the Icon Circle (green square), except offset by the model's alignment_x/y **
+
+    When an item is selected, the view controller goes into selected mode.
+        • The armature dynamic behaviors are removed for all circles
+        • UICollisionBehaviors are added, one for each of the unselected attachment circles
+        • A UICollisionBehavior is added that defines the screen bounds as a collision boundary
+        • A gravity behavior is added to unselected items
+        • The selected attachment circle frame is scaled up (this can be a UIView animation)
+        • The selected costume imagery is scaled up and animated into place using a springy UIView animation on its frame. The final position is specified by the item's model struct, specifically the display_x/y **
+
+    These in combination should suffice for the "fall animation", and placing the costume onto Scotch.
+
+    When a different item is tapped, or the selected costume is tapped, the screen is reverted:
+        • All behaviors are removed
+        • UIView animations animate the frame of the selected item back to its icon size, and the corresponding circle down to its icon size
+        • Simultaneously, the radial armature behaviors are re-introduced which should pull all the elements back to their positions.
+        • Attachment behaviors have their frequency and damping set so that the items animate smoothly back into place instead of just "teleporting" there
+        • A delegate is set and specified on the dynamic animator (-dynamicAnimatorDidPause:) to detect when the items have settled, at which point frequency and damping are set to zero, restoring the proper behavior of the armature
+
+    NOTE that the selected attachment's FRAME is changed, not its transform, because the animator is in control of UIView.transform. Alternatively, the circle and the costumes can be subviews of a container view. The animator would be in control of the container's transform leaving the actual circle's and costume's transform available for scale manipulations.
+
+    The titles that appear above Scotch are simple UIView animations that transition on and off according to selection state. They are populated from the model's item description field.
+
+    On -viewDidLoad:, JSON is loaded from the server using the supplied endpoint and loaded into the view controller's model. This project shows how it can be done. After loading, new items are placed in the center of the screen behind Scotch, and new attachment behaviors are created to pull them into the right position in an animated fashion. See updateDisplayFromModel() for specifics.
+
+
+
+    ** I have no idea what these constants are. Are the % offsets from the center of the images?

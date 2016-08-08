@@ -10,10 +10,12 @@
 		27A386091D57B8DF006C8DE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A386081D57B8DF006C8DE4 /* AppDelegate.swift */; };
 		27A3860B1D57B8DF006C8DE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A3860A1D57B8DF006C8DE4 /* ViewController.swift */; };
 		27A3860E1D57B8DF006C8DE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A3860C1D57B8DF006C8DE4 /* Main.storyboard */; };
-		27A386101D57B8DF006C8DE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27A3860F1D57B8DF006C8DE4 /* Assets.xcassets */; };
 		27A386131D57B8DF006C8DE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A386111D57B8DF006C8DE4 /* LaunchScreen.storyboard */; };
 		27A3861E1D57B8DF006C8DE4 /* ScotchGuardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A3861D1D57B8DF006C8DE4 /* ScotchGuardTests.swift */; };
 		27A386291D57B8DF006C8DE4 /* ScotchGuardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A386281D57B8DF006C8DE4 /* ScotchGuardUITests.swift */; };
+		27A386381D57BF1A006C8DE4 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27A386371D57BF1A006C8DE4 /* config.plist */; };
+		27A3863C1D57BF51006C8DE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27A3863B1D57BF51006C8DE4 /* Assets.xcassets */; };
+		27A3863E1D57BF90006C8DE4 /* Design.txt in Resources */ = {isa = PBXBuildFile; fileRef = 27A3863D1D57BF90006C8DE4 /* Design.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,6 @@
 		27A386081D57B8DF006C8DE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27A3860A1D57B8DF006C8DE4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		27A3860D1D57B8DF006C8DE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		27A3860F1D57B8DF006C8DE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27A386121D57B8DF006C8DE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27A386141D57B8DF006C8DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27A386191D57B8DF006C8DE4 /* ScotchGuardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScotchGuardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +48,10 @@
 		27A386241D57B8DF006C8DE4 /* ScotchGuardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScotchGuardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A386281D57B8DF006C8DE4 /* ScotchGuardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScotchGuardUITests.swift; sourceTree = "<group>"; };
 		27A3862A1D57B8DF006C8DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27A386371D57BF1A006C8DE4 /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
+		27A386391D57BF29006C8DE4 /* fonts.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fonts.txt; sourceTree = "<group>"; };
+		27A3863B1D57BF51006C8DE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27A3863D1D57BF90006C8DE4 /* Design.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Design.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +102,11 @@
 		27A386071D57B8DF006C8DE4 /* ScotchGuard */ = {
 			isa = PBXGroup;
 			children = (
-				27A386081D57B8DF006C8DE4 /* AppDelegate.swift */,
+				27A3863B1D57BF51006C8DE4 /* Assets.xcassets */,
+				27A386391D57BF29006C8DE4 /* fonts.txt */,
+				27A386361D57BEF3006C8DE4 /* App */,
 				27A3860A1D57B8DF006C8DE4 /* ViewController.swift */,
-				27A3860C1D57B8DF006C8DE4 /* Main.storyboard */,
-				27A3860F1D57B8DF006C8DE4 /* Assets.xcassets */,
-				27A386111D57B8DF006C8DE4 /* LaunchScreen.storyboard */,
-				27A386141D57B8DF006C8DE4 /* Info.plist */,
+				27A3863D1D57BF90006C8DE4 /* Design.txt */,
 			);
 			path = ScotchGuard;
 			sourceTree = "<group>";
@@ -123,6 +127,18 @@
 				27A3862A1D57B8DF006C8DE4 /* Info.plist */,
 			);
 			path = ScotchGuardUITests;
+			sourceTree = "<group>";
+		};
+		27A386361D57BEF3006C8DE4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				27A3860C1D57B8DF006C8DE4 /* Main.storyboard */,
+				27A386371D57BF1A006C8DE4 /* config.plist */,
+				27A386081D57B8DF006C8DE4 /* AppDelegate.swift */,
+				27A386111D57B8DF006C8DE4 /* LaunchScreen.storyboard */,
+				27A386141D57B8DF006C8DE4 /* Info.plist */,
+			);
+			name = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +209,7 @@
 				TargetAttributes = {
 					27A386041D57B8DF006C8DE4 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 499Z8DV26P;
 					};
 					27A386181D57B8DF006C8DE4 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -229,8 +246,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27A386381D57BF1A006C8DE4 /* config.plist in Resources */,
+				27A3863E1D57BF90006C8DE4 /* Design.txt in Resources */,
 				27A386131D57B8DF006C8DE4 /* LaunchScreen.storyboard in Resources */,
-				27A386101D57B8DF006C8DE4 /* Assets.xcassets in Resources */,
+				27A3863C1D57BF51006C8DE4 /* Assets.xcassets in Resources */,
 				27A3860E1D57B8DF006C8DE4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,10 +420,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ScotchGuard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.broham.ScotchGuard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -412,10 +434,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ScotchGuard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.broham.ScotchGuard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -484,6 +509,7 @@
 				27A3862F1D57B8DF006C8DE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27A386301D57B8DF006C8DE4 /* Build configuration list for PBXNativeTarget "ScotchGuardTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +518,7 @@
 				27A386321D57B8DF006C8DE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27A386331D57B8DF006C8DE4 /* Build configuration list for PBXNativeTarget "ScotchGuardUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +527,7 @@
 				27A386351D57B8DF006C8DE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

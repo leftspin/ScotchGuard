@@ -1,0 +1,5 @@
+All fonts are HelveticaNeue-Bold.
+Intro font size is 16pt, black
+Intro button font size is 20pt, white
+Main Screen Title font is 34pt, #E15926
+Main Screen Subtitle font is 16pt, black
